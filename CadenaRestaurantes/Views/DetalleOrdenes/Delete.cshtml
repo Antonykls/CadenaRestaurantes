@@ -1,0 +1,72 @@
+﻿@model CadenaRestaurantes.Models.DetalleOrdenes
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Desea eliminar este registro?</h3>
+<div>
+    <h4>DetalleOrdenes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DetalleID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetalleID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdenID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdenID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlatilloID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlatilloID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioUnitario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioUnitario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subtotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subtotal)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-primary" /> |
+            @Html.ActionLink("Regresar a la Lista", "Index")
+        </div>
+    }
+</div>

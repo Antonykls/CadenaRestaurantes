@@ -1,0 +1,42 @@
+﻿@model CadenaRestaurantes.Models.Ordenes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Ordenes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdenID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdenID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MesaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MesaID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.OrdenID }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Regresar a la Lista", "Index")
+</p>
